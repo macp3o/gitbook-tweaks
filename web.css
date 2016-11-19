@@ -1,0 +1,18 @@
+
+/* Make secondary headings smaller and more distinctive
+*/
+.page-inner h2 {
+	font-size: 1.4em;
+}
+.page-inner h3 {
+	font-size: 1.25em;
+}
+
+/* Improve navigation TOC, and add autmatic numbering
+*/
+.summary li.chapter a:hover { color:#c60; text-decoration:none }
+
+.book-summary ul, .articles { counter-reset:toc; }
+.book-summary li.chapter a:before {
+	counter-increment:toc; content:counters(toc,".")  " ";
+}
